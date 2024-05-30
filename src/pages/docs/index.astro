@@ -1,0 +1,17 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+import { getCollection } from 'astro:content';
+
+const docs = await getCollection('docs')
+---
+
+<Layout title="Documentation">
+	<div class="text-4xl text-red-500">Test</div>
+
+	<div class="flex flex-col gap-1">
+		{docs.map((item) => (
+		<a href={`/docs/${item.slug}`}>{item.data.title}</a>
+		))}
+	</div>
+</Layout>
