@@ -18,7 +18,10 @@ const { Content } = await entry.render()
 ---
 
 <Layout title="Documentation">
-	<div class="text-4xl text-red-500">Test</div>
+
+	<section class="py-10">
+		<h1 class="text-4xl text-black font-semibold">{entry.data.title}</h1>
+	</section>
 
 	<Prose>
 	<Content />
