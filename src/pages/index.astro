@@ -1,7 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const githubUrl = import.meta.env.PUBLIC_GITHUB_URL;
 ---
 
 <Layout title="Welcome to Astro.">
-	<div class="text-4xl text-red-500">Test</div>
+
+	<section class="py-20">
+		<h1 class="text-4xl font-semibold mb-6">Manage your billiard venue with Billiard Software!</h1>
+
+		<p class="text-lg text-neutral-800 mb-4">Billiard Software is a web based billiard venue management software.</p>
+
+		<div class="flex items-center gap-2">
+
+			<a href={githubUrl} class="px-4 py-3 bg-blue-600 text-white hover:text-white hover:bg-blue-500 rounded">Visit GitHub repository</a>
+
+		</div>
+	</section>
+
 </Layout>

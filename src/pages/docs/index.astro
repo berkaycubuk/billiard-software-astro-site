@@ -7,11 +7,17 @@ const docs = await getCollection('docs')
 ---
 
 <Layout title="Documentation">
-	<div class="text-4xl text-red-500">Test</div>
 
-	<div class="flex flex-col gap-1">
-		{docs.map((item) => (
-		<a href={`/docs/${item.slug}`}>{item.data.title}</a>
+	<section class="py-10">
+		<h1 class="text-4xl text-black font-semibold">Documentation</h1>
+	</section>
+
+
+	<ul class="flex flex-col gap-1 list-disc list-inside">
+		{docs.sort((a, b) => a.data.order - b.data.order).map((item) => (
+		<li>
+			<a href={`/docs/${item.slug}`}>{item.data.title}</a>
+		</li>
 		))}
 	</div>
 </Layout>

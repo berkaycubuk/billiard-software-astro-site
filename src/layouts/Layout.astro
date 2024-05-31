@@ -17,10 +17,16 @@ import Footer from '../components/Footer.astro'
 	<body class="flex flex-col min-h-screen">
 		<Header />
 
-		<main class="container mx-auto grow">
+		<main class="container mx-auto grow px-6 py-6">
 		<slot />
 		</main>
 
 		<Footer />
 	</body>
 </html>
+
+<style is:global>
+	a {
+		@apply text-blue-600 hover:text-blue-500 transition-all;
+	}
+</style>
